@@ -1,9 +1,29 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { AiOutlinePlus } from "react-icons/ai"
 import Todo from "./Todo"
+import { db } from "./Firebase"
+import { collection, query, orderBy } from "firebase/firestore"
 
 function App() {
   const [todos, setTodos] = useState(["learn react", "learn tailwind"])
+
+//create a function to add todos
+//read todos from firebase
+useEffect(() => {
+  const q = query(collection(db, "todos"))
+  const unsubscribe = onSnapshot(q, (querySnapshot) => {
+    let todosArr = []
+    querySnapshot.forEach((doc) => {
+      todosArr.push(doc.data())
+    })
+//update todos to firebase
+//create a function to delete todos
+//create a function to edit todos
+
+
+
+
+
 
   return (
     <div className="h-screen w-screen p-4 bg-gradient-to-r from-black to-slate-600 ">
