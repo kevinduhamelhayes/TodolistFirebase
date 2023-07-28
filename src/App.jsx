@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="h-screen w-screen p-4 bg-gradient-to-r from-black to-slate-600 ">
-      <div className="bg-slate-100 max-w-[500px] w-full m-auto rounded-md shadow-xl p4">
+      <div className=" bg-slate-100 max-w-[500px] w-full m-auto rounded-md shadow-xl p-4">
         <h3 className="text-3xl font-bold text-center text-gray-800 p-2">
           Todo App
         </h3>
@@ -66,8 +66,8 @@ function App() {
             type="text"
             className="order p-2 w-full text-xl"
           />
-          <button className="border p4 ml-2 bg-black text-white">
-            <AiOutlinePlus size={3} />
+          <button className="border p-4 ml-2 bg-black text-white">
+            <AiOutlinePlus color="white" size={30} />
           </button>
         </form>
         <ul>
@@ -82,7 +82,7 @@ function App() {
         </ul>
         <ul>
           {todos.length < 1 ? null : (
-            <p className="text-center p-2">you haven {todos.length} todos</p>
+            <p className="text-center p-2">You have {todos.length} To-Dos</p>
           )}
         </ul>
       </div>
